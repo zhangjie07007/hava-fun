@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?167b570c015d3c626db921e35add08d5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+		<meta charset="UTF-8">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>咸鱼之王宝箱计算器</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				list-style: none
+			}
+			 body{
+                
+                background-color: #e8faff;
+            }
+
+			.flex {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center
+			}
+
+			.adv {
+				width: 80%;
+				max-width: 380px;
+				flex-direction: row;
+				justify-content: space-between;
+				margin: 10px
+			}
+
+			.title {
+				color: #0061bb;
+				font-size: 25px
+			}
+
+			h1.flex {
+				height: 110px;
+				justify-content: space-around;
+				font-size: 16px;
+				color: #00a542;
+				text-align: center
+			}
+
+			#gzh {
+				border-bottom: 2px solid#008a37;
+				cursor: pointer
+			}
+
+			.container {
+				width: 100%;
+				max-width: 420px;
+				flex-direction: row;
+				flex-wrap: wrap;
+				gap: 20px
+			}
+
+			.box {
+				width: 110px;
+				height: 114px;
+				box-shadow: #868686 0 0 4px;
+				border-radius: 5%;
+				text-align: center
+			}
+
+			.count {
+				margin-top: -6px
+			}
+
+			input,
+			button {
+				width: 80px;
+				height: 25px;
+				outline-color: #50CCFD;
+				border-color: #1f1f1f;
+				border-radius: 6px;
+				margin-top: 2px;
+				padding-top: 2px;
+				box-sizing: border-box;
+				text-align: center;
+				font-size: 16px;
+				cursor: pointer
+			}
+
+			button {
+				height: 25px;
+				padding: 0;
+				font-size: 12px;
+				background: #419ff7;
+				color: white;
+				border: none
+			}
+
+			button:hover {
+				background-color: #63b4ff
+			}
+
+			#result {
+				width: 330px;
+				margin-top: 20px;
+				line-height: 32px;
+				background-color:  #1F1F1F;
+				padding: 20px;
+				border-radius: 10px;
+				font-size: 18px
+			}
+
+			#result div {
+				width: 100%;
+				margin: 0;
+				text-align: center
+			}
+
+			#result span {
+				display: inline-block;
+				width: 70%;
+				color: white
+			}
+
+			#result b {
+				display: inline-block;
+				width: 25%;
+				color: rgb(255, 99, 99)
+			}
+
+			#specific {
+				margin: 10px 0 0 0;
+				transform: scale(1.2);
+				color: rgb(56, 56, 56);
+				font-weight: bold
+			}
+
+			textarea {
+				height: 0;
+				opacity: 0
+			}
+
+			#toast {
+				max-width: 400px;
+				min-width: 300px;
+				padding: 0 14px;
+				color: rgb(255, 255, 255);
+				line-height: 40px;
+				text-align: center;
+				border-radius: 4px;
+				position: fixed;
+				top: 30%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 999999;
+				background: rgba(0, 0, 0, .7);
+				font-size: 16px
+			}
+
+			#specificClac {
+				width: 350px;
+				border-radius: 10px;
+				background-color: white;
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				box-shadow: rgb(134, 134, 134)0 0 10px;
+				padding: 30px;
+				box-sizing: border-box;
+				display: none
+			}
+
+			#specificClac div {
+				display: flex;
+				justify-content: space-around;
+				margin: 10px 0
+			}
+
+			.kind div {
+				background-position: filter: grayscale(100%);
+				center center;
+				background-size: 60%;
+				background-repeat: no-repeat;
+				width: 70px;
+				height: 50px;
+				border-radius: 5px;
+				border: 3px solid#008a37
+			}
+
+			#confirm {
+				display: block;
+				margin: 20px auto 0;
+				width: 140px;
+				font-size: 20px;
+				padding: 4px
+			}
+		</style>
+	</head>
+	<body class="flex">
+		<div class="adv flex">
+			<h1 class="flex">
+				<p class="title">咸鱼之王宝箱</p>
+				<p class="title">积分计算器</p>
+				<p id="gzh">宝箱底部输入框填宝箱数量</p>
+				<p id="gzh">点计算即可算当前能开几轮</p>
+				<p id="gzh">满3400积分能完成一轮</p>	
+			</h1>
+		<a href="https://mp.weixin.qq.com/s?__biz=Mzk0MDQ0MzY4OA==&mid=2247483718&idx=1&sn=9859307b349c6775d55dd56faf570a2d&chksm=c2e0d001f59759178c1f9143f2b5cab3ab2f20ba6a02a360fc810bd8e799ace18fb4c628d8da&token=233345111&lang=zh_CN#rd">
+		    	<img src="./picture/攻略.jpg" width="120px"></a>
+		</div>
+		<div class="container  flex">
+			<div class="box"><img src="./picture/VlgtXUhyjPzToqZ.png">
+				<p class="count"><input type="text" id="wooden" value="0"></p>
+			</div>
+			<div class="box"><img src="./picture/Io6V3tXhWc2LeOi.png">
+				<p class="count"><input type="text" id="bronze" value="0"></p>
+			</div>
+			<div class="box"><img src="./picture/AOLC2VuQhKfEqJF.png">
+				<p class="count"><input type="text" id="accomplished" value="0"></p>
+			</div>
+			<div class="box"><img src="./picture/YvQbPJynTkuGxEM.png">
+				<p class="count"><input type="text" id="gold" value="0"></p>
+			</div>
+			<div class="box"><img src="./picture/E14hKXjv7qNYDCm.png">
+				<p class="count"><input type="text" id="platinum" value="0"></p>
+			</div>
+			<div class="box"><img src="./picture/ZJUxpmFgsYq7Ei6.png">
+				<p class="count"><button id="market">设置黑市</button></p>
+			</div>
+		</div>
+		<div id="result"></div><textarea id="textarea">咸鱼激活码</textarea>
+		<div id="toast"></div>
+		<div id="specificClac">
+			<h5>1、每日黑市购买宝箱的种类</h5>
+			<div class="kind">
+				<div style="background-image: url(https://jsq.czymfzs.cn/static/picture/VlgtXUhyjPzToqZ.png);"></div>
+				<div style="background-image: url(https://jsq.czymfzs.cn/static/picture/Io6V3tXhWc2LeOi.png);"></div>
+				<div style="background-image: url(https://jsq.czymfzs.cn/static/picture/YvQbPJynTkuGxEM.png);"></div>
+			</div>
+			<h5>2、每日黑市购买次数</h5>
+			<div><button id="minus">-1</button><input type="text" id="count" value="3"><button id="plus">+1</button>
+			</div>
+            <h5>#第一次使用需前往黑市购买计算器设置一次购买宝箱</h5>
+			<h5>#仅需设置一次，结果将保存至浏览器中</h5>
+			<h5>#前往<a href="index.html" style="color: #61362D;">黑市购买计算器</a></h5><button id="confirm"
+				style="height: 40px;">确定</button>
+		</div>
+	</body>
+	<button id="confirm"
+				style="height: 40px;">计算</button>
+	<script src="./index.js">
+
+	</script>
+</html>
